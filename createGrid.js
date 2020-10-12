@@ -3,7 +3,6 @@ function createGrid(rows, columns) {
     for (i = 1; i <= totalItems; i++) {
         let item = document.createElement("div");
         item.classList.add("grid-item");
-        item.textContent = i;
         item.addEventListener("mouseover", function(){drawPath(item)});
         document.getElementById("grid-container").appendChild(item);
     }
@@ -12,5 +11,5 @@ function createGrid(rows, columns) {
 
 }
 
-createGrid(8,8);
+createGrid(5,5);
 

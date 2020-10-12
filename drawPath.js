@@ -1,4 +1,3 @@
-function drawPath() {
-    let gridItem = document.getElementsByClassName("grid-item");
-    
+function drawPath(gridItem) {
+    gridItem.style.backgroundColor = "black";
 }

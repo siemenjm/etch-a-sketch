@@ -10,6 +10,3 @@ function createGrid(rows, columns) {
     document.getElementById("grid-container").style.gridTemplateColumns = "repeat(" + columns + ", 1fr)";
 
 }
-
-createGrid(5,5);
-

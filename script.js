@@ -7,8 +7,8 @@ function createGrid(rows, columns) {
         document.getElementById("main-container").appendChild(item);
     }
 
-    document.getElementById("main-container").style.gridTemplateColumns = "1fr repeat(" + columns + ", 1fr);";
+    document.getElementById("main-container").style.gridTemplateColumns = "repeat(" + columns + ", 1fr)";
 
 }
 
-createGrid(16,16);
+createGrid(8,8);

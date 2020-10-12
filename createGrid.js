@@ -1,11 +1,17 @@
 function createGrid(rows, columns) {
+    let gridContainer = document.getElementById("grid-container");
+    while (gridContainer.hasChildNodes()) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+
     totalItems = rows * columns;
     for (i = 1; i <= totalItems; i++) {
         let item = document.createElement("div");
         item.classList.add("grid-item");
+        item.style.backgroundColor = "white";
         item.addEventListener("mouseover", function(){drawPath(item)});
-        document.getElementById("grid-container").appendChild(item);
+        gridContainer.appendChild(item);
     }
 
-    document.getElementById("grid-container").style.gridTemplateColumns = "repeat(" + columns + ", 1fr)";
+    gridContainer.style.gridTemplateColumns = "repeat(" + columns + ", 1fr)";
 }

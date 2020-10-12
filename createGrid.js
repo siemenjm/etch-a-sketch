@@ -5,10 +5,10 @@ function createGrid(rows, columns) {
         item.classList.add("grid-item");
         item.textContent = i;
         item.addEventListener("mouseover", function(){drawPath(item)});
-        document.getElementById("main-container").appendChild(item);
+        document.getElementById("grid-container").appendChild(item);
     }
 
-    document.getElementById("main-container").style.gridTemplateColumns = "repeat(" + columns + ", 1fr)";
+    document.getElementById("grid-container").style.gridTemplateColumns = "repeat(" + columns + ", 1fr)";
 
 }
 

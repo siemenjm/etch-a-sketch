@@ -2,16 +2,35 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: black;
-    background-color: white;
+    color: rgb(255, 185, 124);
+    background-color: rgb(19, 40, 61);
     margin: 1% 5% 5% 5%;
+}
+
+#content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0% 5% 2% 5%;
+    width: 40%;
+    min-width: 500px;
+}
+
+h1 {
+    font-size: 75px;
+    margin-bottom: 0%;
+}
+
+p {
+    font-size: 20px;
 }
 
 #grid-container {
     display: grid;
     border: black solid 5px;
-    margin: 5%;
+    margin: 0% 5% 2% 5%;
     width: 40%;
+    min-width: 500px;
 }
 
 .grid-item {

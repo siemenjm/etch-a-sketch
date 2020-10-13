@@ -11,25 +11,17 @@ function drawPath(gridItem, penColor) {
         gridItem.style.backgroundColor = "rgb(" + redValue + ", " + greenValue + ", " + blueValue + ")";
         gridItem.style.borderColor = "rgb(" + redValue + ", " + greenValue + ", " + blueValue + ")";
     } else if (penColor === "darken") {
-        let maxRGBValue = 255;
-        let percentDarker = 0.1;
-        let colorValueChange = maxRGBValue * percentDarker;
-        
-        let currentRGBValue = getComputedStyle(gridItem).backgroundColor;
-        let colorValue = currentRGBValue.slice(4, 7);
-        let newColorValue = colorValue - colorValueChange;
-        let newColorValueString = newColorValue.toString();
+        let maxRGBValue = 250;
+        let darkenPercentage = 0.1;
+        let darkenColorChange = maxRGBValue * darkenPercentage;
 
-        let newRGBValue = currentRGBValue
-        let colorIndex = 1;
-        while (colorIndex <= 3) {
-            newRGBValue = newRGBValue.replace(colorValue, newColorValueString);
+        let currentColor = window.getComputedStyle(gridItem).getPropertyValue("background-color");
+        let currentRGBValue = parseInt(currentColor.slice(4,7));
+        let newRGBValue = (currentRGBValue - darkenColorChange).toString();
+        let newColor = "rgb(" + newRGBValue + ", " + newRGBValue + ", " + newRGBValue + ")";
         
-            colorIndex++;
-        }
-        console.log(newRGBValue);
-
-        gridItem.style.backgroundColor = newRGBValue;
-        gridItem.style.borderColor = newRGBValue;
+        gridItem.style.backgroundColor = newColor;
+        gridItem.style.borderColor = newColor;
+        console.log(newColor);
     }
 }

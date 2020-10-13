@@ -11,7 +11,7 @@ function drawPath(gridItem, penColor) {
         gridItem.style.backgroundColor = "rgb(" + redValue + ", " + greenValue + ", " + blueValue + ")";
         gridItem.style.borderColor = "rgb(" + redValue + ", " + greenValue + ", " + blueValue + ")";
     } else if (penColor === "darken") {
-        let maxRGBValue = 250;
+        let maxRGBValue = 255;
         let darkenPercentage = 0.1;
         let darkenColorChange = maxRGBValue * darkenPercentage;
 
@@ -22,6 +22,5 @@ function drawPath(gridItem, penColor) {
         
         gridItem.style.backgroundColor = newColor;
         gridItem.style.borderColor = newColor;
-        console.log(newColor);
     }
 }
